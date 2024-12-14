@@ -5,32 +5,34 @@ import java.util.Arrays;
 public class MergeSort {
     public static void main(String[] args) {
 
-        int[] vetor = {10, 12, 4, 1, 4, 7, 87, 2};
-        int[] axiliar = new int[vetor.length];
+        int[] vetor = {45, 54, 21, 1, 54, 3};
+        int[] aux = new int[vetor.length];
 
-        mergeSort(vetor, axiliar, 0, vetor.length - 1);
+        mergeSort(vetor, aux, 0, vetor.length - 1);
 
-        System.out.print(Arrays.toString(vetor) + " ");
-
+        System.out.print("Ordernado: " + Arrays.toString(vetor) + " ");
 
     }
 
-    public static void mergeSort(int[] vetor, int[] auxiliar, int inicio, int fim) {
+    public static void mergeSort(int[] vetor, int[] aux, int inicio, int fim) {
+
         if (inicio < fim) {
+
             int meio = (inicio + fim) / 2;
 
-            mergeSort(vetor, auxiliar, inicio, meio);
-            mergeSort(vetor, auxiliar, meio + 1, fim);
+            mergeSort(vetor, aux, inicio, meio);
+            mergeSort(vetor, aux, meio + 1, fim);
 
-            intercalar(vetor, auxiliar, inicio, meio, fim);
-
+            intercalar(vetor, aux, inicio, meio, fim);
         }
+
 
     }
 
-    private static void intercalar(int[] vetor, int[] auxiliar, int inicio, int meio, int fim) {
+    private static void intercalar(int[] vetor, int[] aux, int inicio, int meio, int fim) {
+
         for (int i = inicio; i <= fim; i++) {
-            auxiliar[i] = vetor[i];
+            aux[i] = vetor[i];
 
         }
 
@@ -38,24 +40,28 @@ public class MergeSort {
         int direita = meio + 1;
 
         for (int i = inicio; i <= fim; i++) {
+
             if (esquerda > meio) {
-                vetor[i] = auxiliar[direita++];
+                vetor[i] = aux[direita++];
 
             } else if (direita > fim) {
-                vetor[i] = auxiliar[esquerda++];
+                vetor[i] = aux[esquerda++];
 
-            } else if (auxiliar[esquerda] < auxiliar[direita]) {
-                vetor[i] = auxiliar[esquerda++];
+            } else if (aux[esquerda] < aux[direita]) {
+                vetor[i] = aux[esquerda++];
 
             } else {
-                vetor[i] = auxiliar[direita++];
+                vetor[i] = aux[direita++];
 
             }
 
         }
 
 
+
+
     }
+
 
 }
 
