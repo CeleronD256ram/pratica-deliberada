@@ -20,7 +20,7 @@ public class MergeSort {
 
             int meio = (inicio + fim) / 2;
 
-            mergeSort(vetor, aux, inicio, meio);
+            mergeSort(vetor, aux, inicio, meio); // 1 metaded
             mergeSort(vetor, aux, meio + 1, fim);
 
             intercalar(vetor, aux, inicio, meio, fim);
