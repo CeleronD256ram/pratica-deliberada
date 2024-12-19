@@ -4,23 +4,29 @@ import java.util.Scanner;
 
 public class Exe1079 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner SC = new Scanner(System.in);
 
-        //Quantidade de casos de teste
-        int n = sc.nextInt();
+        //quantidade de testes
+        int N = SC.nextInt();
 
-        for (int i = 0; i < n; i++) {
-            int x = sc.nextInt();
 
-            String parOuImpar = (x % 2 == 0) ? "PAR" : "IMPAR";
-            String positivoOuNegativo = (x > 0) ? "POSITIVO" : "NEGATIVO";
+        for (int i = 0; i < N; i++) {
+            int numero = SC.nextInt();
 
-            System.out.println(parOuImpar + " " + positivoOuNegativo);
 
+            if (numero == 0) {
+                System.out.println("NULL");
+            } else {
+
+                String paridade = (numero % 2 == 0) ? "EVEN" : "ODD";
+
+
+                String sinal = (numero > 0) ? "POSITIVE" : "NEGATIVE";
+
+
+                System.out.println(paridade + " " + sinal);
+            }
         }
-
-
-
 
 
     }
