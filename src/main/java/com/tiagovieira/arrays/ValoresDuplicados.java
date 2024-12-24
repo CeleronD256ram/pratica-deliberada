@@ -31,14 +31,14 @@ public class ValoresDuplicados {
             }
         }
 
-        System.out.println("Novo vetor sem número repetidos:");
+        System.out.println("Novo vetor sem números repetidos:");
         for (int vetorDeUnico : vetorDeUnicos) {
             System.out.print(vetorDeUnico + " ");
 
         }
 
 
-        }
+    }
 
 
 }
