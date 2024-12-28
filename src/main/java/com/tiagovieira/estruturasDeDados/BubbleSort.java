@@ -27,9 +27,11 @@ public class BubbleSort {
 
         double [] precos = {4.49, 50, 132.80, 3.20, 77.99};
 
+        System.out.print("ARRAY ORIGINAL: " + Arrays.toString(precos) + "\n");
+
         bubbleSort(precos);
 
-        System.out.println("PREÇOS ORDENADOS DO MAIS BARATO ATÉ O MAIS CARO \n" + Arrays.toString(precos));
+        System.out.print("PREÇOS ORDENADOS DO MAIS BARATO ATÉ O MAIS CARO: " + Arrays.toString(precos));
 
 
     }
