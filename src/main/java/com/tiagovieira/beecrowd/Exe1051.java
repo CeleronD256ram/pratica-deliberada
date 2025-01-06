@@ -1,10 +1,11 @@
 package com.tiagovieira.beecrowd;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Exe1051 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
         double salario = sc.nextDouble();
         double imposto = 0.0;
