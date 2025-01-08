@@ -5,7 +5,7 @@ public class torreDeHanoi {
 
         int numDiscos = 3;
 
-        resolverTorre(numDiscos, 'A', 'B', 'C');
+        resolverTorre(numDiscos, 'a', 'b', 'c');
 
 
     }
