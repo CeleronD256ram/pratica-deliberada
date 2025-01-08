@@ -1,9 +1,23 @@
 package com.tiagovieira.recursao;
 
+import java.util.Random;
+
 public class MenorValor {
     public static void main(String[] args) {
+        Random random = new Random();
 
-        int[] valores = {2, 43, 9, 5, 11, 6, 3, 6, 23, 56, 3, 65};
+        int[] valores = new int[10];
+        for (int i = 0; i < valores.length; i++) {
+            valores[i] = random.nextInt(9) * i;
+
+        }
+
+        System.out.println("Vetor: ");
+        for (int valor : valores) {
+            System.out.print(valor + " ");
+
+        }
+
 
         int menorValor = menorValor(valores);
         System.out.println("O menor valor encontrado no Array foi o " + menorValor);
